@@ -1,6 +1,6 @@
-import '@styles/globals.css';
+import "@styles/globals.css";
 
-import { ReactNode } from "react";
+import { ReactNode, Suspense } from "react";
 
 import Provider from "@/components/Provider";
 import Nav from "@/components/Nav";
@@ -25,7 +25,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
 
           <main className="app">
             <Nav />
-            {children}
+            <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
           </main>
         </Provider>
       </body>
