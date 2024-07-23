@@ -3,7 +3,7 @@ import { Schema, model, models, Document } from "mongoose";
 
 
 // Define the Recipe schema
-const RecipeSchema = new Schema({
+const PromptSchema = new Schema({
   creator: {
     type: Schema.Types.ObjectId,
     ref: "User",
@@ -19,6 +19,6 @@ const RecipeSchema = new Schema({
 });
 
 // Create or get the Recipe model
-const Recipe = models.Recipe || model("Recipe", RecipeSchema);
+const Prompt = models.Recipe || model("Recipe", PromptSchema);
 
-export default Recipe;
+export default Prompt;

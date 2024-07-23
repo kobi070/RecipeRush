@@ -10,8 +10,6 @@ const Profile = ({ name, desc, data, handleEdit, handleDelete }) => {
       </h1>
       <p className="desc text-left">{desc}</p>
 
-      <div className="mt-15 prompt_layout">Hello World !</div>
-
       <div className="mt-10 prompt_layout">
         {data.map((post) => (
           <PromptCard
