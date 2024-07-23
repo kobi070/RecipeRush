@@ -1,7 +1,7 @@
 import Recipe from "@models/recipe";
 import { connectToDB } from "@utils/database";
 
-export const POST = async (request) => {
+export const POST = async (request: Request) => {
   const { userId, recipe, tag } = await request.json();
 
   try {

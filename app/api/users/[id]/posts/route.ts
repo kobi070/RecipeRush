@@ -1,7 +1,7 @@
 import Recipe from "@models/recipe";
 import { connectToDB } from "@utils/database";
 
-export const GET = async (request, { params }) => {
+export const GET = async (request: Request, { params }: any) => {
   try {
     await connectToDB();
 

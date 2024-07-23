@@ -1,7 +1,7 @@
 import Recipe from "@models/recipe";
 import { connectToDB } from "@utils/database";
 
-export const GET = async (request, { params }) => {
+export const GET = async (request: Request, { params }: any) => {
   try {
     await connectToDB();
 
@@ -14,7 +14,7 @@ export const GET = async (request, { params }) => {
   }
 };
 
-export const PATCH = async (request, { params }) => {
+export const PATCH = async (request: Request, { params }: any) => {
   const { recipe, tag } = await request.json();
 
   try {
@@ -39,7 +39,7 @@ export const PATCH = async (request, { params }) => {
   }
 };
 
-export const DELETE = async (request, { params }) => {
+export const DELETE = async (request: Request, { params }: any) => {
   try {
     await connectToDB();
 
